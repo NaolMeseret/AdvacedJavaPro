@@ -21,6 +21,11 @@ public class First extends Application {
         TextField idField = new TextField();
         idField.setPromptText("Enter your ID");
         HBox idRow = new HBox(30, idLabel, idField);
+        
+           Label phoneLabel= new Label("Phone:");
+         TextField phoneField = new TextField();
+        phoneField.setPromptText("Enter your PHone Number");
+        HBox phoneRow = new HBox(30, phoneLabel, phoneField);
 
         Label genderLabel = new Label("Gender:");
         ToggleGroup genderGroup = new ToggleGroup();
@@ -34,10 +39,12 @@ public class First extends Application {
         Button resetButton = new Button("Reset");
         Button saveButton = new Button("Save");
 
+        // e: represent event
         resetButton.setOnAction(e -> {
-            nameField.clear();
-            idField.clear();
-            genderGroup.selectToggle(null);
+            // nameField.clear();
+            // idField.clear();
+            // genderGroup.selectToggle(null);
+//            THS CALLED LAMDA EXPRESSION
         });
 
         saveButton.setOnAction(e -> {
@@ -49,7 +56,7 @@ public class First extends Application {
         HBox buttonRow = new HBox(10, resetButton, saveButton);
 
         
-        VBox layout = new VBox(15, nameRow, idRow, genderRow, buttonRow);
+        VBox layout = new VBox(15, nameRow, idRow, genderRow, buttonRow, phoneRow);
         layout.setStyle("-fx-padding: 20px;");
 
         
@@ -67,3 +74,6 @@ public class First extends Application {
         launch(args);
     }
 }
+// TextArea for calculator history
+
+// ComboBOX like Department : software, IT, IS, CIVIL, ELECTRICAL
